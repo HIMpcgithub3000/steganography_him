@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="image.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Image Steganography</h2>
+        <form id="stegForm">
+            <label for="fileUpload">Upload Image:</label>
+            <input type="file" id="fileUpload" accept="image/*"><br>
+
+            <label for="message">Enter Message:</label>
+            <textarea id="message" placeholder="Type your hidden message here..."></textarea><br>
+
+            <button type="button" onclick="encodeMessage()">Hide Message</button>
+            <button type="button" onclick="decodeMessage()">Extract Message</button>
+        </form>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="image.js"></script>
+
+</body>
+</html>
